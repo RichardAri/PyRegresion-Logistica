@@ -1,1 +1,1 @@
-# PyRegresion-lineal
+# Python Regresion-Logistica
