@@ -1,5 +1,5 @@
 # Tratamiento de datos
-from google.colab import drive #cargar csv
+from google.colab import drive #!cargar csv
 import pandas as pd
 import numpy as np #Gráficos
 import matplotlib.pyplot as plt
@@ -12,7 +12,7 @@ import statsmodels.api as sm
 import statsmodels.formula.api as smf
 from statsmodels.stats.weightstats import ttest_ind
 
-#configuracion csv
+#!configuracion csv
 drive.mount('/content/drive')
 df = pd.read_csv('/content/drive/My Drive/regresion_logistica.csv')
 
@@ -29,16 +29,17 @@ warnings.filterwarnings('ignore')
 conteo_clases = df['Class'].value_counts().sort_index()
 print(conteo_clases)
 
-# Gráfico de distribución por clase
-fig, ax = plt.subplots(figsize=(10, 6))  # Ajusta el tamaño del gráfico según tus preferencias
+# !Gráfico de distribución por clase
+fig, ax = plt.subplots(figsize=(10, 6))  # Ajusta el tamaño del grafico 
 sns.violinplot(
-    x='Class',  # Columna que indica la clase
-    y='Clump Thickness',  # Variable independiente que quieres analizar
-    data=df,  # DataFrame que contiene tus datos
+    x='Class',  # ! Columna que indica la clase
+    y='Clump Thickness',  # ! Variable independiente a analizar
+    data=df,  # ! DataFrame (contiene los datos))
     color="white",
     ax=ax)
+
 ax.set_title('Distribución de Clump Thickness|Grosor del monton por clase')
-plt.show()  # Muestra el gráfico
+plt.show()  #* Muestra el gráfico
 
 # Test t entre clases
 data_class_benigna = df[df['Class'] == 'benign']['Clump Thickness']
