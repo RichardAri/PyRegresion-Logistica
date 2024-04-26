@@ -30,7 +30,7 @@ conteo_clases = df['Class'].value_counts().sort_index()
 print(conteo_clases)
 
 # !Gráfico de distribución por clase
-fig, ax = plt.subplots(figsize=(10, 6))  # Ajusta el tamaño del grafico 
+fig, ax = plt.subplots(figsize=(10, 6)) 
 sns.violinplot(
     x='Class',  # ! Columna que indica la clase
     y='Clump Thickness',  # ! Variable independiente a analizar
@@ -47,4 +47,7 @@ data_class_maligna = df[df['Class'] == 'malign']['Clump Thickness']
 
 res_ttest = ttest_ind(x1=data_class_benigna, x2=data_class_maligna, alternative='two-sided')
 print(f"t={res_ttest[0]}, pvalue={res_ttest[1]}")
+
+
+
 
