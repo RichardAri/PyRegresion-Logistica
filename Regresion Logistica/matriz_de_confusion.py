@@ -1,17 +1,20 @@
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix #! import de la  matriz de confusion
 import seaborn as sns
 import numpy as np #Gráficos
 from sklearn.linear_model import LogisticRegression 
 import matplotlib.pyplot as plt
 import pandas as pd
+from google.colab import drive #!cargar csv
 
 #!configuracion csv
 drive.mount('/content/drive')
-df = pd.read_csv('/content/drive/My Drive/regresion_logistica.csv')
+df = pd.read_csv('/content/drive/My Drive/regresion_logistica.csv') #! archivo con nombre regresion_logistica
 
 # Crear una instancia del modelo de regresión logística
 model = LogisticRegression()
-
+# Dividir los datos en conjunto de entrenamiento y conjunto de prueba
+X = df.drop(columns=['Class']) 
+y = df['Class']
 #! ------------------------------------------ Calcular la matriz de confusión con SKLEARN
 
 # Dividir los datos en conjunto de entrenamiento y conjunto de prueba
