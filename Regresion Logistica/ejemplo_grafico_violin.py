@@ -29,6 +29,7 @@ warnings.filterwarnings('ignore')
 conteo_clases = df['Class'].value_counts().sort_index()
 print(conteo_clases)
 
+#! important
 # !Gráfico de distribución por clase
 fig, ax = plt.subplots(figsize=(10, 6)) 
 sns.violinplot(
