@@ -44,3 +44,6 @@ print("Precisión del modelo:", precision)
 
 #! Precisión del modelo: 0.9562043795620438
 #* Esto significa que el modelo tiene una precision del 95%
+
+
+

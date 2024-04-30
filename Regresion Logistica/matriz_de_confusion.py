@@ -53,7 +53,6 @@ model.fit(X_train, y_train)
 # Hacer predicciones en el conjunto de prueba
 y_pred = model.predict(X_test)
 
-
 # Iterar sobre las predicciones y las etiquetas reales para llenar la matriz de confusión
 for i in range(len(y_test)):
     true_class_index = np.where(classes == y_test.iloc[i])[0][0]

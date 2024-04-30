@@ -40,3 +40,5 @@ sns.violinplot(
 
 ax.set_title('Distribución de Clump Thickness|Grosor del monton por clase')
 plt.show()  #* Muestra el gráfico
+
+
